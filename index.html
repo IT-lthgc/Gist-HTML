@@ -20,7 +20,7 @@
     <script>
         async function fetchGist() {
             const proxyUrl = 'https://github.com/IT-lthgc/Gist-HTML/actions';
-            const gistUrl = 'https://gist.github.com/IT-lthgc/a1ae1dd0d728cc9fda1922413fd9e313/raw';
+            const gistUrl = 'https://gist.githubusercontent.com/IT-lthgc/a1ae1dd0d728cc9fda1922413fd9e313/raw';
             const response = await fetch(proxyUrl + gistUrl);
             const content = await response.text();
             document.getElementById('gist-content').innerText = content;
