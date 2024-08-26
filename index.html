@@ -19,14 +19,15 @@
 
     <script>
         async function fetchGist() {
+            const proxyUrl = 'http://localhost:3000/';
             const gistUrl = 'https://gist.github.com/username/gist-id/raw';
-            const response = await fetch(gistUrl);
+            const response = await fetch(proxyUrl + gistUrl);
             const content = await response.text();
             document.getElementById('gist-content').innerText = content;
         }
 
         // Fetch the Gist content every 10 seconds
-        setInterval(fetchGist, 2000);
+        setInterval(fetchGist, 10000);
         fetchGist(); // Initial fetch
     </script>
 </body>
