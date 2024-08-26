@@ -19,7 +19,7 @@
 
     <script>
         async function fetchGist() {
-            const proxyUrl = 'http://localhost:3000/';
+            const proxyUrl = 'http://localhost:4000/';
             const gistUrl = 'https://gist.github.com/IT-lthgc/a1ae1dd0d728cc9fda1922413fd9e313/raw';
             const response = await fetch(proxyUrl + gistUrl);
             const content = await response.text();
