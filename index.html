@@ -19,15 +19,15 @@
 
     <script>
         async function fetchGist() {
-            const proxyUrl = 'http://localhost:4000/';
+            const proxyUrl = 'https://github.com/IT-lthgc/Gist-HTML/actions';
             const gistUrl = 'https://gist.github.com/IT-lthgc/a1ae1dd0d728cc9fda1922413fd9e313/raw';
             const response = await fetch(proxyUrl + gistUrl);
             const content = await response.text();
             document.getElementById('gist-content').innerText = content;
         }
 
-        // Fetch the Gist content every 10 seconds
-        setInterval(fetchGist, 10000);
+        // Fetch the Gist content every 2 seconds
+        setInterval(fetchGist, 2000);
         fetchGist(); // Initial fetch
     </script>
 </body>
