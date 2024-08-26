@@ -1,0 +1,24 @@
+Ent<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Text Messages Portal</title>
+</head>
+<body>
+    <div id="gist-content"></div>
+
+    <script>
+        async function fetchGist() {
+            const gistUrl = 'https://gist.github.com/username/gist-id/raw';
+            const response = await fetch(gistUrl);
+            const content = await response.text();
+            document.getElementById('gist-content').innerText = content;
+        }
+
+        // Fetch the Gist content every 10 seconds
+        setInterval(fetchGist, 10000);
+        fetchGist(); // Initial fetch
+    </script>
+</body>
+</html>er file contents here
