@@ -1,9 +1,18 @@
-Ent<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Text Messages Portal</title>
+    <style>
+        #gist-content {
+            border: 1px solid black;
+            width: 700px;
+            height: 120px;
+            overflow: auto;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <div id="gist-content"></div>
@@ -17,8 +26,8 @@ Ent<!DOCTYPE html>
         }
 
         // Fetch the Gist content every 10 seconds
-        setInterval(fetchGist, 10000);
+        setInterval(fetchGist, 2000);
         fetchGist(); // Initial fetch
     </script>
 </body>
-</html>er file contents here
+</html>
