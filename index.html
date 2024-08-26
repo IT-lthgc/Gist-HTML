@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live TAP klausimas</title>
+    <title>Gist Refresh</title>
     <style>
-        #gist-content {
+        #gist-container {
             border: 1px solid black;
             width: 700px;
             height: 120px;
@@ -15,20 +15,19 @@
     </style>
 </head>
 <body>
-    <div id="gist-content"></div>
-
+    <div id="gist-container"></div>
     <script>
-        async function fetchGist() {
-            const proxyUrl = 'https://github.com/IT-lthgc/Gist-HTML/actions';
-            const gistUrl = 'https://gist.githubusercontent.com/IT-lthgc/a1ae1dd0d728cc9fda1922413fd9e313/raw';
-            const response = await fetch(proxyUrl + gistUrl);
+        const gistUrl = 'https://gist.github.com/IT-lthgc/a1ae1dd0d728cc9fda1922413fd9e313\raw';
+        const gistContainer = document.getElementById('gist-container');
+
+        async function updateGist() {
+            const response = await fetch(gistUrl);
             const content = await response.text();
-            document.getElementById('gist-content').innerText = content;
+            gistContainer.innerHTML = content;
         }
 
-        // Fetch the Gist content every 2 seconds
-        setInterval(fetchGist, 2000);
-        fetchGist(); // Initial fetch
+        setInterval(updateGist, 4000); // Update every 4 seconds
+        updateGist(); // Initial update
     </script>
 </body>
 </html>
