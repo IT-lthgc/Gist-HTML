@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Text Messages Portal</title>
+    <title>Live TAP klausimas</title>
     <style>
         #gist-content {
             border: 1px solid black;
@@ -20,7 +20,7 @@
     <script>
         async function fetchGist() {
             const proxyUrl = 'http://localhost:3000/';
-            const gistUrl = 'https://gist.github.com/username/gist-id/raw';
+            const gistUrl = 'https://gist.github.com/IT-lthgc/a1ae1dd0d728cc9fda1922413fd9e313/raw';
             const response = await fetch(proxyUrl + gistUrl);
             const content = await response.text();
             document.getElementById('gist-content').innerText = content;
